@@ -107,6 +107,16 @@ python $SCRIPT_PATH \
 
 > For more configuration options (e.g., batch size, device selection, custom prompt templates), please refer to `single_infer.py` and `batch_infer.py`.
 
+**Evaluation: Calculating F1 Score**
+
+After inference, evaluate the predictions by computing the F1 score with the following command:
+
+```
+python ../calculate_metrics.py \
+    --file_path "../benchmark/batch_ChineseHarm-1.5B.json" \
+    --true_label_field "标签" \
+    --predicted_label_field "predict_label"
+```
 ## 📉Baseline
 
 **Hybrid Knowledgeable Prompting**
