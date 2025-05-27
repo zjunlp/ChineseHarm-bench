@@ -15,7 +15,7 @@
 </p>
 </div>
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/zjunlp/LookAheadTuning) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/github/last-commit/zjunlp/LookAheadTuning?color=green) 
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/zjunlp/ChineseHarm-bench) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/github/last-commit/zjunlp/ChineseHarm-bench?color=green) 
 
 ## Table of Contents
 
