@@ -124,7 +124,7 @@ python ../calculate_metrics.py \
 First, generate diverse prompting instructions that reflect real-world violations:
 
 ```
-SCRIPT_PATH="../baseline/Synthetic_Data_Curation.py"
+SCRIPT_PATH="../baseline/Hybrid_Knowledgeable_Prompting.py"
 output_path="../baseline/prompt.json"
 python $SCRIPT_PATH\
     --output_path $output_path
