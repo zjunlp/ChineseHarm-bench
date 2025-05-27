@@ -94,8 +94,8 @@ To run inference on the entire ChineseHarm-Bench using ChineseHarm-1.5B and 8 NP
 ```
 SCRIPT_PATH="../infer/batch_infer.py"
 model_name="zjunlp/ChineseHarm-1.5B"
-file_name="../benchmark/batch.json"
-output_file="../benchmark/batch_ChineseHarm-1.5B.json"
+file_name="../benchmark/bench.json"
+output_file="../benchmark/bench_ChineseHarm-1.5B.json"
 
 python $SCRIPT_PATH \
     --model_name $model_name \
@@ -113,7 +113,7 @@ After inference, evaluate the predictions by computing the F1 score with the fol
 
 ```
 python ../calculate_metrics.py \
-    --file_path "../benchmark/batch_ChineseHarm-1.5B.json" \
+    --file_path "../benchmark/bench_ChineseHarm-1.5B.json" \
     --true_label_field "标签" \
     --predicted_label_field "predict_label"
 ```
