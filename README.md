@@ -11,15 +11,15 @@
 </div>
 <div align="center">
 <p align="center">
-  <img src="figs/main.png"/>
-</p>
+  <img src="figs/chineseharm_case.png" width="80%"/></p>
 </div>
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/zjunlp/ChineseHarm-bench) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/github/last-commit/zjunlp/ChineseHarm-bench?color=green) 
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/zjunlp/ChineseHarm-bench) ![](https://img.shields.io/github/last-commit/zjunlp/ChineseHarm-bench?color=green) 
 
 ## Table of Contents
 
 - 🌻 [Ethics Statement](#ethics-statement)
+- 🧐 [Acknowledgement](#acknowledgement)
 - 🌟 [Overview](#overview)
 - 🚀 [Installation](#installation)
 - 📚 [Inference](#inference)
@@ -35,18 +35,24 @@ All datasets have been anonymized and reviewed by the Institutional Review Board
 
 Moreover, we categorically denounce any malicious misuse of this benchmark and are committed to ensuring that its development and use consistently align with human ethical principles.
 
+##  🧐Acknowledgement
+
+We gratefully acknowledge Tencent for providing the dataset and LLaMA-Factory for the training codebase.
+
+
 ## 🌟Overview
 
 We introduce ChineseHarm-Bench, a professionally annotated benchmark for Chinese harmful content detection, covering six key categories. It includes a knowledge rule base to enhance detection and a knowledge-augmented baseline that enables smaller LLMs to match state-of-the-art performance. 
+
+The benchmark construction process is illustrated in the figure below. For more detailed procedures, please refer to our paper.
 
 <div>
 </div>
 <div align="center">
 <p align="center">
-  <img src="figs/chineseharm_case.png" width="80%"/>
+  <img src="figs/main.png"/>
 </p>
 </div>
-
 
 ## 🚀Installation
 
@@ -69,9 +75,9 @@ We introduce ChineseHarm-Bench, a professionally annotated benchmark for Chinese
 
 We release the following variants of our harmful content detection model:
 
-- [**ChineseHarm-1.5B**](https://huggingface.co/zjunlp/ChineseHarm-1.5B)
-- [**ChineseHarm-3B**](https://huggingface.co/zjunlp/ChineseHarm-3B)
-- [**ChineseHarm-7B**](https://huggingface.co/zjunlp/ChineseHarm-7B)
+- [**ChineseGuard-1.5B**](https://huggingface.co/zjunlp/ChineseGuard-1.5B)
+- [**ChineseGuard-3B**](https://huggingface.co/zjunlp/ChineseGuard-3B)
+- [**ChineseGuard-7B**](https://huggingface.co/zjunlp/ChineseGuard-7B)
 
 🔹 Single Inference (Example)
 
@@ -87,7 +93,7 @@ python $SCRIPT_PATH \
     --text $text
 ```
 
-🔸 Batch Inference (Multi-NPU)
+🔸 Batch Inference (Multi-NPU or Multi-GPU)
 
 To run inference on the entire ChineseHarm-Bench using ChineseHarm-1.5B and 8 NPUs:
 
@@ -106,6 +112,8 @@ python $SCRIPT_PATH \
 ```
 
 > For more configuration options (e.g., batch size, device selection, custom prompt templates), please refer to `single_infer.py` and `batch_infer.py`.
+>
+> **Note:** The inference scripts support both NPU and GPU devices.
 
 **Evaluation: Calculating F1 Score**
 
@@ -117,6 +125,7 @@ python ../calculate_metrics.py \
     --true_label_field "标签" \
     --predicted_label_field "predict_label"
 ```
+
 ## 📉Baseline
 
 **Hybrid Knowledgeable Prompting**
