@@ -4,9 +4,11 @@
 > ⚠️ **WARNING**: This project and associated data contain content that may be toxic, offensive, or disturbing. Use responsibly and with discretion.
 
 <p align="center">
-  <a href="">📄arXiv</a>
+  <a href="">Project</a> •
+  <a href="">Paper</a> •
+  <a href="https://huggingface.co/collections/zjunlp/chineseharm-bench-683b452c5dcd1d6831c3316c">Hugging Face</a> 
 </p>
-
+  
 <div>
 </div>
 <div align="center">
