@@ -74,6 +74,7 @@ The benchmark construction process is illustrated in the figure below. For more 
    ```
 
 ## 📚Inference
+Our inference scripts support both **Huawei Ascend NPUs and NVIDIA GPUs**, enabling flexible deployment across different hardware platforms.
 
 We release the following variants of our harmful content detection model:
 
