@@ -84,7 +84,7 @@ We release the following variants of our harmful content detection model:
 
 🔹 Single Inference (Example)
 
-Run single-input inference using the ChineseHarm-1.5B model:
+Run single-input inference using the ChineseGuard-1.5B model:
 
 ```
 SCRIPT_PATH="../infer/single_infer.py"
@@ -98,7 +98,7 @@ python $SCRIPT_PATH \
 
 🔸 Batch Inference (Multi-NPU or Multi-GPU)
 
-To run inference on the entire ChineseHarm-Bench using ChineseHarm-1.5B and 8 NPUs:
+To run inference on the entire ChineseHarm-Bench using ChineseGuard-1.5B and 8 NPUs:
 
 ```
 SCRIPT_PATH="../infer/batch_infer.py"
