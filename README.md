@@ -211,7 +211,15 @@ For more training configurations and customization options, please refer to the 
 Please cite our repository if you use ChineseHarm-bench in your work. Thanks!
 
 ```bibtex
-
+@misc{liu2025chineseharmbenchchineseharmfulcontent,
+      title={ChineseHarm-Bench: A Chinese Harmful Content Detection Benchmark}, 
+      author={Kangwei Liu and Siyuan Cheng and Bozhong Tian and Xiaozhuan Liang and Yuyang Yin and Meng Han and Ningyu Zhang and Bryan Hooi and Xi Chen and Shumin Deng},
+      year={2025},
+      eprint={2506.10960},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.10960}, 
+}
 ```
 
 ## 🎉Contributors
