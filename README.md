@@ -26,6 +26,7 @@
 - 🚀 [Installation](#installation)
 - 📚 [Inference](#inference)
 - 📉 [Baseline](#baseline)
+- 🔧 [Main Results](#main-results)
 - 🚩 [Citation](#citation)
 
 ## 🌻Ethics Statement
@@ -205,6 +206,11 @@ llamafactory-cli train  examples/train_full/train.yaml
 
 For more training configurations and customization options, please refer to the official [LLaMA-Factory GitHub repository](https://github.com/hiyouga/LLaMA-Factory).
 
+## 🔧Main Results
+<div align="center">
+<p align="center">
+  <img src="figs/chineseharm_result.png" width="80%"/></p>
+</div>
 
 ## 🚩Citation
 
