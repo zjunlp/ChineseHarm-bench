@@ -207,10 +207,40 @@ llamafactory-cli train  examples/train_full/train.yaml
 For more training configurations and customization options, please refer to the official [LLaMA-Factory GitHub repository](https://github.com/hiyouga/LLaMA-Factory).
 
 ## 🔧Main Results
-<div align="center">
-<p align="center">
-  <img src="figs/chineseharm_result.png" width="80%"/></p>
-</div>
+> 🔴：Without Knowledge Augmentation 🟢：With Knowledge Augmentation 🟦：Our Strong Baseline
+
+|            Model            |  Strategy  | Knowledge | Gambling | Pornography | Abuse | Fraud | Illicit Ads | Non-Violation | Macro-F1 |
+| :-------------------------: | :--------: | :-------: | :------: | :---------: | :---: | :---: | :---------: | :-----------: | :------: |
+|       **Deepseek-R1**       | Prompting  |     🔴     |   0.82   |    0.77     | 0.84  | 0.53  |    0.65     |     0.78      |   0.73   |
+|                             | Prompting  |     🟢     |   0.89   |    0.83     | 0.87  | 0.65  |    0.77     |     0.80      |   0.80   |
+|         **O3-mini**         | Prompting  |     🔴     |   0.56   |    0.55     | 0.74  | 0.57  |    0.22     |     0.45      |   0.51   |
+|                             | Prompting  |     🟢     |   0.70   |    0.55     | 0.73  | 0.60  |    0.40     |     0.46      |   0.57   |
+|         **GPT-4o**          | Prompting  |     🔴     |   0.78   |    0.75     | 0.83  | 0.59  |    0.53     |     0.79      |   0.71   |
+|                             | Prompting  |     🟢     |   0.89   |    0.75     | 0.82  | 0.60  |    0.75     |     0.86      |   0.78   |
+|       **GPT-4o-mini**       | Prompting  |     🔴     |   0.57   |    0.70     | 0.71  | 0.43  |    0.40     |     0.59      |   0.57   |
+|                             | Prompting  |     🟢     |   0.82   |    0.76     | 0.74  | 0.51  |    0.62     |     0.72      |   0.69   |
+|    **Gemini 2.0 Flash**     | Prompting  |     🔴     |   0.72   |    0.76     | 0.84  | 0.63  |    0.52     |     0.75      |   0.71   |
+|                             | Prompting  |     🟢     |   0.91   |    0.77     | 0.82  | 0.51  |    0.69     |     0.75      |   0.74   |
+|    **Claude 3.5 Sonnet**    | Prompting  |     🔴     |   0.76   |    0.76     | 0.79  | 0.11  |    0.57     |     0.80      |   0.63   |
+|                             | Prompting  |     🟢     |   0.87   |    0.81     | 0.78  | 0.36  |    0.72     |     0.78      |   0.72   |
+|    **BERT-Base-Chinese**    | Finetuning |     🔴     |   0.49   |    0.60     | 0.73  | 0.49  |    0.50     |     0.68      |   0.58   |
+|              🟦              | Finetuning |     🟢     |   0.74   |    0.65     | 0.76  | 0.68  |    0.68     |     0.70      |   0.70   |
+| **Qwen--2.5-0.5B-Instruct** | Prompting  |     🔴     |   0.00   |    0.21     | 0.00  | 0.00  |    0.00     |     0.30      |   0.09   |
+|                             | Prompting  |     🟢     |   0.00   |    0.11     | 0.00  | 0.00  |    0.00     |     0.30      |   0.07   |
+|                             | Finetuning |     🔴     |   0.35   |    0.59     | 0.72  | 0.39  |    0.44     |     0.74      |   0.54   |
+|              🟦              | Finetuning |     🟢     |   0.75   |    0.64     | 0.75  | 0.62  |    0.70     |     0.74      |   0.70   |
+| **Qwen--2.5-1.5B-Instruct** | Prompting  |     🔴     |   0.22   |    0.08     | 0.62  | 0.47  |    0.00     |     0.48      |   0.31   |
+|                             | Prompting  |     🟢     |   0.55   |    0.13     | 0.53  | 0.52  |    0.00     |     0.45      |   0.36   |
+|                             | Finetuning |     🔴     |   0.36   |    0.61     | 0.74  | 0.43  |    0.48     |     0.81      |   0.57   |
+|              🟦              | Finetuning |     🟢     |   0.77   |    0.71     | 0.77  | 0.70  |    0.74     |     0.79      |   0.75   |
+|  **Qwen-2.5-3B-Instruct**   | Prompting  |     🔴     |   0.38   |    0.53     | 0.58  | 0.38  |    0.36     |     0.50      |   0.46   |
+|                             | Prompting  |     🟢     |   0.62   |    0.55     | 0.46  | 0.58  |    0.10     |     0.49      |   0.47   |
+|                             | Finetuning |     🔴     |   0.47   |    0.63     | 0.77  | 0.37  |    0.49     |     0.82      |   0.59   |
+|              🟦              | Finetuning |     🟢     |   0.81   |    0.72     | 0.79  | 0.72  |    0.74     |     0.85      |   0.77   |
+|  **Qwen--2.5-7B-Instruct**  | Prompting  |     🔴     |   0.35   |    0.58     | 0.42  | 0.09  |    0.45     |     0.56      |   0.41   |
+|                             | Prompting  |     🟢     |   0.51   |    0.63     | 0.48  | 0.37  |    0.32     |     0.42      |   0.46   |
+|                             | Finetuning |     🔴     |   0.35   |    0.64     | 0.72  | 0.38  |    0.49     |     0.82      |   0.57   |
+|              🟦              | Finetuning |     🟢     |   0.82   |    0.70     | 0.75  | 0.75  |    0.75     |     0.82      |   0.77   |
 
 ## 🚩Citation
 
