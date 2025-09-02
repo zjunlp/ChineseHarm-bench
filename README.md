@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://zjunlp.github.io/project/ChineseHarm-Bench/">Project</a> •
-  <a href="https://arxiv.org/abs/2506.10960v1">Paper</a> •
+  <a href="https://arxiv.org/abs/2506.10960">Paper</a> •
   <a href="https://huggingface.co/collections/zjunlp/chineseharm-bench-683b452c5dcd1d6831c3316c">Hugging Face</a> 
 </p>
   
