@@ -3,7 +3,7 @@
 
 This folder contains the ChineseHarm-Bench.
 
-* `bench.json` is the full benchmark combining all categories.
+* `bench.json`: the full benchmark, combining all categories, with 1,000 examples per category.
 * The other files (e.g., `低俗色情.json`, `欺诈.json`) are category-specific subsets.
 
 Each file is a list of examples with:
